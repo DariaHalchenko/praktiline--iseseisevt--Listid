@@ -125,5 +125,77 @@ for i in range(len(nimekirja)):
     if nimekirja[i]==maksimum:
         nimekirja[i]=useless_number
 print("Esialgne nimekiri: "+str(nimekirja1))
-print("Muudetud numbriga loend: "+str(nimekirja))
+print("Muudetud numbriga loend: "+str(nimekirja)) 
+
+#6.1
+#from random import *
+#nimekirja=[] 
+#N=int(input("Sisestage numbrite pikkus: "))
+#for i in range(N):
+#    arv=randint(10,100)
+#    nimekirja.append(arv)
+#maksimum=max(nimekirja)
+#nimekirja[nimekirja.index(maksimum)]=maksimum/len(nimekirja) 
+#print("Muudetud numbriga loend: "+str(nimekirja))  
+
+
+#7.Sorteerimine
+#nimekirja=[] 
+#try:
+#    N=int(input("Sisestage numbrite arv: ")) #
+#    for i in range(N): 
+#        try:
+#            arv=abs(int(input(f"Sisestage number {i+1}:")))
+#            nimekirja.append(arv)  
+#        except ValueError:
+#                print("Viga") 
+#    nimekirja.sort() 
+#    print("Nimekiri on sorteeritud: "+str(nimekirja)) 
+#    nimekirja.reverse() 
+#    print("Sortimisloendi järjekord: "+str(nimekirja)) 
+#except ValueError:
+#    ("Viga")
+
+
+#12
+#from random import *
+#nimekirja=[] 
+#nimekirja1=[]
+#for i in range(10):
+#    arv=randint(1,100)
+#    nimekirja.append(arv)
+#    nimekirja1.append(arv)
+#min_index=nimekirja.index(min(nimekirja))   
+#max_index=nimekirja.index(max(nimekirja))
+#for i in range(len(nimekirja)):
+#        nimekirja[min_index]=0
+#        nimekirja[max_index]=100
+#print("Esialgne nimekiri: "+str(nimekirja1))
+#print("Loend, mis asendas selle loendi miinimum ja maksimumelemendid: "+str(nimekirja)) 
+
+
+#9. Nimi kontroll 
+from string import punctuation
+vokaali=["a","o","e","i","u","õ","ä","ö","ü","y"]
+konsonanti="t,w,q,r,p,s,d,f,g,h,j,k,l,z,x,c,v,b,n,"
+while True:
+     nimi = input("Sisesta oma nimi: ").capitalize()
+     if nimi.isalpha():   #isalpha() возвращает True в том случае, если все символы в строке являются буквами
+         break
+     else:
+         print("Nimi peab sisaldama ainult tähti!")
+print("Tere, {}!".format(nimi)) 
+nimi_pikkus=len(nimi)
+v=k=0 
+for sümbol in nimi:
+    if sümbol.lower() in vokaali:
+        v+=1
+    elif sümbol.lower() in konsonanti:
+        k+=1
+print("Tähtede arv nimes:", nimi_pikkus)
+print("Täishäälikute arv:", v)
+print("Konsonantide arv:", k)
+unique_letters = sorted(set(nimi.lower()))   #сортирует элементы данного списка в определенном порядке возрастания или убывания.
+print("Nimetage tähed tähestiku järjekorras:", ", ".join(unique_letters)) 
+
 
