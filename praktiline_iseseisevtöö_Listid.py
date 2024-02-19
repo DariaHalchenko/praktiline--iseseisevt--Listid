@@ -199,3 +199,21 @@ unique_letters = sorted(set(nimi.lower()))   #сортирует элемент�
 print("Nimetage tähed tähestiku järjekorras:", ", ".join(unique_letters)) 
 
 
+#8. Võrdsepikkusega elemendid
+nimekirja = [['крот', 'белка', 'выхухоль'], 
+             ['a', 'aa', 'aaa', 'aaaa', 'aaaaa'], 
+             ['qweasdqweas', 'q', 'rteww', 'ewqqqqq']]
+suur = 0
+indeks = 0
+for i in range(len(nimekirja)):
+   suur = 0
+   for j in nimekirja[i]:
+       suur = len(j)
+       for x in nimekirja[i]:
+           if len(x) < suur:
+               indeks = nimekirja[i].index(x)
+               tagastab_koguse = suur - len(x)
+               nimekirja[i][indeks] += "_" * tagastab_koguse
+print(nimekirja) 
+
+
