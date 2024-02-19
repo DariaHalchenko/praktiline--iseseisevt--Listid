@@ -217,3 +217,30 @@ for i in range(len(nimekirja)):
 print(nimekirja) 
 
 
+#10
+töötajad=["Aadu Suur", "Malle Kapsas", "Uudo Koba", "Tiit Kopikas", "Vahur Vana"]
+vanused=[56, 42, 32, 22, 67]
+palgad=[2500, 1500, 700, 550, 870] 
+maksimaalne_palk=max(palgad) 
+maksimaalne_palk_indeks=palgad.index(maksimaalne_palk) 
+nimi_maksimaalne_palk=töötajad[maksimaalne_palk_indeks] 
+keskmine_palk=sum(palgad)/len(palgad) 
+for palk in palgad:
+    keskmisest=palk>keskmine_palk
+    keskmisest=sum 
+vanus_keskmisest_vähem=[] 
+vanus_keskmisest_rohkem=[] 
+for i in range(len(töötajad)):
+    if palgad [i]<=keskmine_palk:
+        vanus_keskmisest_vähem.append(vanused[i]) 
+    else:
+        vanus_keskmisest_rohkem.append(vanused[i]) 
+keskmisest_väiksem_palk=sum(vanus_keskmisest_vähem)/len(vanus_keskmisest_vähem) 
+keskmisest_suurem_palk=sum(vanus_keskmisest_rohkem)/len(vanus_keskmisest_rohkem)
+print("Kõige suurema palgaga töötaja on "+str(nimi_maksimaalne_palk), "ning tema palk on "+str(maksimaalne_palk)) 
+print("Keskmine palk on "+str(keskmine_palk))
+print("Keskmisest palgast rohkem teenib "+str(keskmisest), "töötajat") 
+print("Keskmised vanused neile, kes teenivad keskmisest palgast vähem: "+str(keskmisest_väiksem_palk)) 
+print("Keskmised vanused neile, kes teenivad keskmisest palgast rohkem: "+str(keskmisest_suurem_palk))
+
+
