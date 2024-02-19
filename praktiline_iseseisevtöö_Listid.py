@@ -244,3 +244,10 @@ print("Keskmised vanused neile, kes teenivad keskmisest palgast vähem: "+str(ke
 print("Keskmised vanused neile, kes teenivad keskmisest palgast rohkem: "+str(keskmisest_suurem_palk))
 
 
+#11
+tähestik=["a","b","c","d", "e", "f", "g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+indeks = -1
+for i in tähestik:
+   indeks += 1
+   tähestik[indeks] = i * (indeks + 1) 
+print("Inglise tähestiku järjestus: "+str(tähestik))
