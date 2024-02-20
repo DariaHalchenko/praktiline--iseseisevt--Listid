@@ -253,4 +253,49 @@ for i in tähestik:
 print("Inglise tähestiku järjestus: "+str(tähestik)) 
 
 
+#13. Arva sõna ära
+from random import choice
+sõnad = ["Apple", "Banaan", "Pirn", "Ploom", "Arbuus", "Melon", "Kõrvits", "Kirss", "Kiivi", "Mandariin","Aprikoos", "Viinamarja", "Maasikas", "Vaarikad", "Sidrun"]
+sõna = choice(sõnad)
+kuva = ["_"]*len(sõna)
+arvasi_ära = []
+püüdlused = 1
+maksimaalsed_püüdlused = 10
+print(" ".join(kuva))
+while True:
+    try:
+        oletada = input("Sisesta tähestik: ").lower()
+    except: 
+        print("Vale andme tüüp.")
+    if len(oletada)>1: 
+        print("Palun sisestage ainult üks täht!")
+    if oletada in arvasi_ära:
+        print("Sa juba arvasid selle tähe ära!")
+        continue
+    if oletada in sõna.lower():
+        print("Õige!")
+        arvasi_ära.append(oletada)
+        kuva = ' '
+        for letter in sõna.lower():
+            if letter in arvasi_ära:
+                kuva += letter
+            else:
+                kuva += '_'
+        print(kuva.capitalize())
+    else:
+        print("Vale!")
+        print("Püüdluste arv: " +str(püüdlused), "/10")
+        arvasi_ära.append(oletada)
+        print(kuva)
+    if '_' not in kuva:
+        print("Sa arvasid sõna ära! Mõistatuslik sõna oli: " +str(sõna))
+        print("Kasutatud püüdluste arv:" +str(püüdlused), "/10")
+        break
+    püüdlused += 1
+    if püüdlused >=maksimaalsed_püüdlused:
+        print("Sa ei arvanud sõna ära!Mõistatuslik sõna oli: " +str(sõna))
+        print("Kasutatud püüdluste arv: " +str(püüdlused), "/10")
+        break
+
+
 
