@@ -314,4 +314,16 @@ for i in pealinn:
 print("Meie järjendis on 12 Euroopa pealinna" +str(pealinn))  
 
 
-
+#15
+numbrid = [[1,2,3,4,5,6,7,8,9,10],["üks", "kaks", "kolm", "neli", "viis", "kuus", "seitse", "kaheksa", "üheksa", "kümme"],["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"],["uno","due", "tre", "quattro", "cinque", "sei", "sette", "otto", "nove", "dieci"]]
+indeks = -1
+tingimused = [0,0]
+for i in numbrid:
+    tingimused[0] += len(i)
+while tingimused[1] != tingimused[0]:
+    indeks += 1
+    for i in range(len(numbrid)):
+        if len(numbrid[i]) > indeks:
+            print(numbrid[i][indeks], end=" ")
+            tingimused[1] += 1
+    print()
