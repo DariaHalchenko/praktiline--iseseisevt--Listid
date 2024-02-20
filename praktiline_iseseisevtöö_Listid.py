@@ -154,7 +154,7 @@ try:
     nimekirja.reverse() 
     print("Sortimisloendi järjekord: "+str(nimekirja)) 
 except ValueError:
-    ("Viga")
+    print("Viga")
 
 
 #12
