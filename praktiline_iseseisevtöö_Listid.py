@@ -298,4 +298,20 @@ while True:
         break
 
 
+#14
+pealinn = ["London", "Ateena", "Tallinn", "Helsinki", "Stockholm", "Riia", "Varssavi", "Pariis","Berliin", "Rooma"]
+pealinn.sort() 
+for i in pealinn:
+    print(i)
+for i in range(2):
+    uue_pealinn = input("Sisestage uue pealinn: ")
+    pealinn.append(uue_pealinn) 
+pealinn.sort() 
+for i in pealinn:
+    print(i)
+    indeks = pealinn.index(i)
+    pealinn[indeks] = str((indeks + 1)) + ". " + i
+print("Meie järjendis on 12 Euroopa pealinna" +str(pealinn))  
+
+
 
