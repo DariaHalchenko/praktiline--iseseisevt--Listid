@@ -253,30 +253,4 @@ for i in tähestik:
 print("Inglise tähestiku järjestus: "+str(tähestik)) 
 
 
-#13. Arva sõna ära
-from random import choice 
-sõnad=("Apple", "Banaan", "Pirn", "Ploom", "Arbuus", "Melon", "Kõrvits", "Kirss", "Kiivi", "Mandariin")
-sõna=choice(sõnad) 
-kuva=["_"]*len(sõna)
-äraarvatud_tähed=[]
-püüdlused=0
-while "_" in kuva and püüdlused<5:
-    print=(" ".join(kuva))
-    täpp=input("Sisesta tähestik: ").lower()  
-    if täpp in äraarvatud_tähed:
-        print=("Sa arvasid selle tähe ära!") 
-    elif täpp in sõna.lower():
-        for i in range(len(sõna)):
-            if sõna[i].lower()==täpp:
-                kuva[i]=sõna[i]
-        äraarvatud_tähed.append(täpp) 
-        print=("Äraarvatud tähed: "+", ".join(äraarvatud_tähed)) 
-    else:
-        äraarvatud_tähed.append(täpp) 
-        püüdlused+=1
-        print=("Ma ei arvanud seda ära! Püüdlused on jäänud:"+str(5- püüdlused))
-        print=("Kasutatud püüdluste arv: "+str(püüdlused))
-if "_" not in kuva:
-    print("Sa arvasid sõna ära! Mõistatuslik sõna oli: "+str(sõna)) 
-else:
-    print=("Sa ei arvanud sõna ära! Mõistatuslik sõna oli: "+str(sõna))
+
