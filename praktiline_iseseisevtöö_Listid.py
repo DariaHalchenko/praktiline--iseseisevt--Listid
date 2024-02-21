@@ -255,7 +255,7 @@ print("Inglise tähestiku järjestus: "+str(tähestik))
 
 
 #13. Arva sõna ära
-from random import choice
+from random import choice #randint.choice используется для хранение выбраного слова (рандомного) чтобы использовать его для игры
 sõnad = ["Apple", "Banaan", "Pirn", "Ploom", "Arbuus", "Melon", "Kõrvits", "Kirss", "Kiivi", "Mandariin","Aprikoos", "Viinamarja", "Maasikas", "Vaarikad", "Sidrun"]
 sõna = choice(sõnad)
 kuva = ["_"]*len(sõna)
