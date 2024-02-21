@@ -175,26 +175,27 @@ print("Loend, mis asendas selle loendi miinimum ja maksimumelemendid: "+str(nime
 
 
 #9. Nimi kontroll 
+#Сделала код наподобие первого задания
 from string import punctuation
 vokaali=["a","o","e","i","u","õ","ä","ö","ü","y"]
 konsonanti="t,w,q,r,p,s,d,f,g,h,j,k,l,z,x,c,v,b,n,"
 while True:
-     nimi = input("Sisesta oma nimi: ").capitalize()
+     nimi = input("Mis su nimi on?: ").capitalize() #
      if nimi.isalpha():   #isalpha() возвращает True в том случае, если все символы в строке являются буквами
          break
      else:
-         print("Nimi peab sisaldama ainult tähti!")
+         print("Viga")
 print("Tere, {}!".format(nimi)) 
-nimi_pikkus=len(nimi)
+tähed_nimes=len(nimi)
 v=k=0 
 for sümbol in nimi:
     if sümbol.lower() in vokaali:
         v+=1
     elif sümbol.lower() in konsonanti:
         k+=1
-print("Tähtede arv nimes:", nimi_pikkus)
-print("Täishäälikute arv:", v)
-print("Konsonantide arv:", k)
+print("Mitu tähte on nimes? " +str(tähed_nimes))
+print("Vokaali:" +str(v))
+print("Konsonanti::" +str(k))
 unique_letters = sorted(set(nimi.lower()))   #сортирует элементы данного списка в определенном порядке возрастания или убывания.
 print("Nimetage tähed tähestiku järjekorras:", ", ".join(unique_letters)) 
 
@@ -210,11 +211,11 @@ for i in range(len(nimekirja)):
    for j in nimekirja[i]:
        suur = len(j)
        for x in nimekirja[i]:
-           if len(x) < suur:
+           if len(x)<suur:
                indeks = nimekirja[i].index(x)
                tagastab_koguse = suur - len(x)
                nimekirja[i][indeks] += "_" * tagastab_koguse
-print(nimekirja) 
+print("Uus nimekiri: " +str(nimekirja))
 
 
 #10
@@ -293,7 +294,7 @@ while True:
         break
     püüdlused += 1
     if püüdlused >=maksimaalsed_püüdlused:
-        print("Sa ei arvanud sõna ära!Mõistatuslik sõna oli: " +str(sõna))
+        print("Sa ei arvanud sõna ära! Mõistatuslik sõna oli: " +str(sõna))
         print("Kasutatud püüdluste arv: " +str(püüdlused), "/10")
         break
 
@@ -326,4 +327,16 @@ while tingimused[1] != tingimused[0]:
         if len(numbrid[i]) > indeks:
             print(numbrid[i][indeks], end=" ")
             tingimused[1] += 1
-    print()
+    print() 
+
+
+#16
+from random import choice
+vastuseid=["Jah,kindlasti!", "Jah!", "Võib-olla!", "Ei!"] 
+while True:
+    try:
+        küsimused=input("Küsi mis tahes küsimust, millele saad vastata jah või ei: ")
+        vastus=choice(vastuseid)
+        print("Vastus küsimusele: " +str(vastus))
+    except:
+        print("Viga")
