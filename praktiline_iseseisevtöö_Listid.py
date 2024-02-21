@@ -267,7 +267,7 @@ while True:
     try:
         oletada = input("Sisesta tähestik: ").lower()
     except: 
-        print("Vale andme tüüp.")
+        print("Viga")
     if len(oletada)>1: 
         print("Palun sisestage ainult üks täht!")
     if oletada in arvasi_ära:
